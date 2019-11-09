@@ -50,11 +50,11 @@ function prompt(data) {
                     connection.query("UPDATE products SET stock_quantity = stock_quantity = ? WHERE item_id = ?", 
                     [cart.items, cart.quantity], 
                     function(err, res){
-                        console.log("You made that purchase, but you ne3ed more stuff!");
+                        console.log("You made that purchase... now, you need more stuff!");
                         shopping();
                     })
                 }else{
-                    console.log("We're out of stock bubbo!");
+                    console.log("We're out of stock, check back soon!");
                     shopping();
                 }
             }
